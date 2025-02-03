@@ -9,5 +9,8 @@ $routes->get('/', 'Home::index');
 $routes->get('users', 'UserController::index');
 $routes->get('roles', 'RoleController::index');
 $routes->get('reservas', 'ReservaController::index');
+$routes->get('clases', 'ClaseController::index');
+$routes->get('clasesUsuario', 'ClasesUsuarioController::index');
+$routes->get('pistas', 'PistaController::index');
 
 

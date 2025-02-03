@@ -1,0 +1,141 @@
+CRITICAL - 2025-02-03 10:51:18 --> Error: Call to undefined function obtenerUsuarios()
+[Method: GET, Route: users]
+in APPPATH\Views\pages\lists\users.php on line 509.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/lists/users', [], true)
+ 4 APPPATH\Controllers\userController.php(9): view('pages/lists/users')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UserController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-03 13:01:40 --> mysqli_sql_exception: Access denied for user 'usuario'@'localhost' (using password: YES)
+[Method: GET, Route: users]
+in APPPATH\Views\pages\lists\users.php on line 511.
+ 1 APPPATH\Views\pages\lists\users.php(511): mysqli->__construct('localhost', 'usuario', Object(SensitiveParameterValue), 'base_de_datos')
+ 2 APPPATH\Views\pages\lists\users.php(540): obtenerUsuarios()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\padel_elite\\app\\Views\\pages\\lists\\users.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/lists/users', [], true)
+ 6 APPPATH\Controllers\userController.php(9): view('pages/lists/users')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UserController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-03 18:38:32 --> mysqli_sql_exception: Unknown column 'id_cliente' in 'field list'
+[Method: GET, Route: reservas]
+in APPPATH\Views\pages\lists\reservas.php on line 521.
+ 1 APPPATH\Views\pages\lists\reservas.php(521): mysqli->query('SELECT id, id_cliente, id_monitor, id_pista, id_clase, fecha, hora, tipo FROM usuarios')
+ 2 APPPATH\Views\pages\lists\reservas.php(541): obtenerReservas()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\padel_elite\\app\\Views\\pages\\lists\\reservas.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/lists/reservas', [], true)
+ 6 APPPATH\Controllers\reservaController.php(9): view('pages/lists/reservas')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReservaController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservaController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-03 18:50:01 --> mysqli_sql_exception: Unknown column 'id_cliente' in 'field list'
+[Method: GET, Route: reservas]
+in APPPATH\Views\pages\lists\reservas.php on line 521.
+ 1 APPPATH\Views\pages\lists\reservas.php(521): mysqli->query('SELECT id, id_cliente, id_monitor, id_pista, id_clase, fecha, hora, tipo FROM usuarios')
+ 2 APPPATH\Views\pages\lists\reservas.php(541): obtenerReservas()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\padel_elite\\app\\Views\\pages\\lists\\reservas.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/lists/reservas', [], true)
+ 6 APPPATH\Controllers\reservaController.php(9): view('pages/lists/reservas')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReservaController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservaController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-03 18:50:06 --> mysqli_sql_exception: Unknown column 'id_cliente' in 'field list'
+[Method: GET, Route: reservas]
+in APPPATH\Views\pages\lists\reservas.php on line 521.
+ 1 APPPATH\Views\pages\lists\reservas.php(521): mysqli->query('SELECT id, id_cliente, id_monitor, id_pista, id_clase, fecha, hora, tipo FROM usuarios')
+ 2 APPPATH\Views\pages\lists\reservas.php(541): obtenerReservas()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\padel_elite\\app\\Views\\pages\\lists\\reservas.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/lists/reservas', [], true)
+ 6 APPPATH\Controllers\reservaController.php(9): view('pages/lists/reservas')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReservaController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservaController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-03 18:50:09 --> mysqli_sql_exception: Unknown column 'id_cliente' in 'field list'
+[Method: GET, Route: reservas]
+in APPPATH\Views\pages\lists\reservas.php on line 521.
+ 1 APPPATH\Views\pages\lists\reservas.php(521): mysqli->query('SELECT id, id_cliente, id_monitor, id_pista, id_clase, fecha, hora, tipo FROM usuarios')
+ 2 APPPATH\Views\pages\lists\reservas.php(541): obtenerReservas()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\padel_elite\\app\\Views\\pages\\lists\\reservas.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/lists/reservas', [], true)
+ 6 APPPATH\Controllers\reservaController.php(9): view('pages/lists/reservas')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReservaController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservaController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-03 18:53:16 --> mysqli_sql_exception: Unknown column 'id_cliente' in 'field list'
+[Method: GET, Route: reservas]
+in APPPATH\Views\pages\lists\reservas.php on line 521.
+ 1 APPPATH\Views\pages\lists\reservas.php(521): mysqli->query('SELECT id, id_cliente, id_monitor, id_pista, id_clase, fecha, hora, tipo FROM usuarios')
+ 2 APPPATH\Views\pages\lists\reservas.php(541): obtenerReservas()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\padel_elite\\app\\Views\\pages\\lists\\reservas.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/lists/reservas', [], true)
+ 6 APPPATH\Controllers\reservaController.php(9): view('pages/lists/reservas')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReservaController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservaController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-03 18:59:09 --> ParseError: syntax error, unexpected token "endforeach", expecting end of file
+[Method: GET, Route: reservas]
+in APPPATH\Views\pages\lists\reservas.php on line 562.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/lists/reservas', [], true)
+ 3 APPPATH\Controllers\reservaController.php(9): view('pages/lists/reservas')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReservaController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservaController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-03 18:59:17 --> ParseError: syntax error, unexpected token "endforeach", expecting end of file
+[Method: GET, Route: reservas]
+in APPPATH\Views\pages\lists\reservas.php on line 562.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/lists/reservas', [], true)
+ 3 APPPATH\Controllers\reservaController.php(9): view('pages/lists/reservas')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReservaController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservaController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-03 19:38:06 --> ErrorException: Undefined variable $usuario
+[Method: GET, Route: pistas]
+in APPPATH\Views\pages\lists\pistas.php on line 551.
+ 1 APPPATH\Views\pages\lists\pistas.php(551): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\wamp64\\www\\padel_elite\\app\\Views\\pages\\lists\\pistas.php', 551)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\padel_elite\\app\\Views\\pages\\lists\\pistas.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/lists/pistas', [], true)
+ 5 APPPATH\Controllers\pistaController.php(9): view('pages/lists/pistas')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PistaController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PistaController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
