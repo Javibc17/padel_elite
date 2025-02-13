@@ -92,7 +92,7 @@ License: For each use you must have a valid license purchased only from above li
 											</span>
 											<!--end::Svg Icon-->
 										</span>
-										<span cslass="menu-title">Default</span>
+										<span cslass="menu-title">Inicio</span>
 									</a>
 								</div>
 	
@@ -160,7 +160,7 @@ License: For each use you must have a valid license purchased only from above li
 									<div class="menu-sub menu-sub-accordion">
 									
 										<div class="menu-item">
-											<a class="menu-link"  href="<?= base_url('pistas') ?>>
+											<a class="menu-link"  href="<?= base_url('pistas') ?>">
 												<span class="menu-bullet">
 													<span class="bullet bullet-dot"></span>
 												</span>
@@ -168,7 +168,7 @@ License: For each use you must have a valid license purchased only from above li
 											</a>
 										</div>
 										<div class="menu-item">
-											<a class="menu-link"  href="<?= base_url('clasesUsuario') ?>>
+											<a class="menu-link"  href="<?= base_url('clasesUsuario') ?>">
 												<span class="menu-bullet">
 													<span class="bullet bullet-dot"></span>
 												</span>
@@ -225,7 +225,7 @@ License: For each use you must have a valid license purchased only from above li
 								</div>
 								
 								<div class="menu-item">
-									<a class="menu-link" href="views/apps/calendar.php">
+									<a class="menu-link" href="<?= base_url('calendar') ?>">
 										<span class="menu-icon">
 											<!--begin::Svg Icon | path: icons/duotune/general/gen014.svg-->
 											<span class="svg-icon svg-icon-2">
@@ -495,7 +495,6 @@ License: For each use you must have a valid license purchased only from above li
 												<!--begin::Table row-->
 												<tr class="text-start text-gray-400 fw-bolder fs-7 text-uppercase gs-0">
 													
-													<th class="min-w-125px">ID</th>
 													<th class="min-w-125px">Nombre</th>
 													<th class="min-w-125px">Estado</th>
 
@@ -515,7 +514,7 @@ License: For each use you must have a valid license purchased only from above li
 												}
 											
 												// Consultar los datos de los usuarios
-												$sql = "SELECT id, nombre, estado FROM pista";
+												$sql = "SELECT  nombre, estado FROM pista";
 												$result = $db->query($sql);
 											
 												// Verificar si hay resultados
@@ -544,22 +543,13 @@ License: For each use you must have a valid license purchased only from above li
 											<tbody class="fw-bold text-gray-600">
 												<?php foreach ($pistas as $pista): ?>
 													<tr>
-														<!--begin::Checkbox-->
-
-														<!--end::Checkbox-->
-														<!--begin::ID-->
-														<td><?= $pista['id'] ?></td>
-														<!--end::ID-->
-														<!--begin::Nombre-->
 														<td>
-															<?= $pista['nombre'] ?></a>
+															<?= $pista['nombre'] ?>
 														</td>
-														<!--end::Nombre-->
-														<!--begin::Email-->
+													
 														<td>
-															<?= $pista['estado'] ?></a>
-														</td>
-														
+															<?= $pista['estado'] ?>
+														</td>			
 													</tr>
 												<?php endforeach; ?>
 											</tbody>

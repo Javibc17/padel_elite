@@ -160,7 +160,7 @@ License: For each use you must have a valid license purchased only from above li
 									<div class="menu-sub menu-sub-accordion">
 									
 										<div class="menu-item">
-											<a class="menu-link" href="../../apps/customers/list.html">
+											<a class="menu-link" href="<?= base_url('pistas') ?>">
 												<span class="menu-bullet">
 													<span class="bullet bullet-dot"></span>
 												</span>
@@ -168,7 +168,7 @@ License: For each use you must have a valid license purchased only from above li
 											</a>
 										</div>
 										<div class="menu-item">
-											<a class="menu-link" href="../../apps/customers/view.html">
+											<a class="menu-link" href="<?= base_url('clasesUsuario') ?>">
 												<span class="menu-bullet">
 													<span class="bullet bullet-dot"></span>
 												</span>
@@ -225,7 +225,7 @@ License: For each use you must have a valid license purchased only from above li
 								</div>
 								
 								<div class="menu-item">
-									<a class="menu-link" href="views/apps/calendar.php">
+									<a class="menu-link" href="<?= base_url('calendar') ?>">
 										<span class="menu-icon">
 											<!--begin::Svg Icon | path: icons/duotune/general/gen014.svg-->
 											<span class="svg-icon svg-icon-2">
@@ -494,7 +494,7 @@ License: For each use you must have a valid license purchased only from above li
 											<!--end::Table head-->
 											<!--begin::Table body-->
 											<?php
-											function obtenerRoles() {
+											function obtenerRoles()  {
 												// Conectar a la base de datos
 												$db = new mysqli('localhost', 'root', '', 'padel_elite');
 											

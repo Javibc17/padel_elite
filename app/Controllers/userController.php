@@ -9,3 +9,5 @@ class UserController extends BaseController
         return view('pages/lists/users');
     }
 }
+
+

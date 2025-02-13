@@ -1,0 +1,72 @@
+CRITICAL - 2025-02-11 11:50:54 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "authentication/basic/sign-in.php"
+[Method: GET, Route: signin]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('authentication/basic/sign-in.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('authentication/basic/sign-in', [], true)
+ 3 APPPATH\Controllers\signinController.php(9): view('authentication/basic/sign-in')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SigninController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SigninController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-11 11:57:55 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "authentication/basic/sign-in.php"
+[Method: GET, Route: signin]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('authentication/basic/sign-in.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('authentication/basic/sign-in', [], true)
+ 3 APPPATH\Controllers\signinController.php(9): view('authentication/basic/sign-in')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SigninController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SigninController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-11 11:59:12 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "authentication/basic/sign-in.php"
+[Method: GET, Route: sign-in]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('authentication/basic/sign-in.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('authentication/basic/sign-in', [], true)
+ 3 APPPATH\Controllers\signinController.php(9): view('authentication/basic/sign-in')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SigninController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SigninController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-11 12:02:14 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "authentication/basic/sign-in.php"
+[Method: GET, Route: signIn]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('authentication/basic/sign-in.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('authentication/basic/sign-in', [], true)
+ 3 APPPATH\Controllers\signinController.php(9): view('authentication/basic/sign-in')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SigninController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SigninController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-11 12:03:57 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "app/authentication/basic/sign-in.php"
+[Method: GET, Route: signIn]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('app/authentication/basic/sign-in.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('app/authentication/basic/sign-in', [], true)
+ 3 APPPATH\Controllers\signinController.php(9): view('app/authentication/basic/sign-in')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SigninController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SigninController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-11 12:04:37 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "authentication/basic/signIn.php"
+[Method: GET, Route: signIn]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('authentication/basic/signIn.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('authentication/basic/signIn', [], true)
+ 3 APPPATH\Controllers\signinController.php(9): view('authentication/basic/signIn')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SigninController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SigninController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

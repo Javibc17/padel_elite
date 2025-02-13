@@ -92,7 +92,7 @@ License: For each use you must have a valid license purchased only from above li
 											</span>
 											<!--end::Svg Icon-->
 										</span>
-										<span cslass="menu-title">Default</span>
+										<span cslass="menu-title">Inicio</span>
 									</a>
 								</div>
 	
@@ -160,7 +160,7 @@ License: For each use you must have a valid license purchased only from above li
 									<div class="menu-sub menu-sub-accordion">
 									
 										<div class="menu-item">
-											<a class="menu-link" href="../../apps/customers/list.html">
+											<a class="menu-link" href="<?= base_url('pistas') ?>">
 												<span class="menu-bullet">
 													<span class="bullet bullet-dot"></span>
 												</span>
@@ -168,7 +168,7 @@ License: For each use you must have a valid license purchased only from above li
 											</a>
 										</div>
 										<div class="menu-item">
-											<a class="menu-link" href="../../apps/customers/view.html">
+											<a class="menu-link" href="<?= base_url('clasesUsuario') ?>">
 												<span class="menu-bullet">
 													<span class="bullet bullet-dot"></span>
 												</span>
@@ -225,7 +225,7 @@ License: For each use you must have a valid license purchased only from above li
 								</div>
 								
 								<div class="menu-item">
-									<a class="menu-link" href="views/apps/calendar.php">
+									<a class="menu-link" href="<?= base_url('calendar') ?>">
 										<span class="menu-icon">
 											<!--begin::Svg Icon | path: icons/duotune/general/gen014.svg-->
 											<span class="svg-icon svg-icon-2">
@@ -491,9 +491,11 @@ License: For each use you must have a valid license purchased only from above li
 												<tr class="text-start text-gray-400 fw-bolder fs-7 text-uppercase gs-0">
 													
 													<th class="min-w-125px">ID</th>
-													<th class="min-w-125px">Nombre</th>
-													<th class="min-w-125px">Email</th>
-													<th class="min-w-125px">Teléfono</th>
+													<th class="min-w-125px">ID_Monitor</th>
+													<th class="min-w-125px">Duracion</th>
+													<th class="min-w-125px">Capacidad</th>
+													<th class="min-w-125px">Fecha y Hora</th>
+
 
 												</tr>
 												<!--end::Table row-->
@@ -501,7 +503,7 @@ License: For each use you must have a valid license purchased only from above li
 											<!--end::Table head-->
 											<!--begin::Table body-->
 											<?php
-											function obtenerClases() {
+											function obtenerClase() {
 												// Conectar a la base de datos
 												$db = new mysqli('localhost', 'root', '', 'padel_elite');
 											
@@ -511,17 +513,17 @@ License: For each use you must have a valid license purchased only from above li
 												}
 											
 												// Consultar los datos de los usuarios
-												$sql = "SELECT id, duracion, capacidad, fecha_hora FROM clase";
+												$sql = "SELECT id, id_monitor, duracion, capacidad, fecha_hora FROM clase";
 												$result = $db->query($sql);
 											
 												// Verificar si hay resultados
 												if ($result->num_rows > 0) {
 													// Almacenar los datos en un array
-													$clases = [];
+													$clase = [];
 													while($row = $result->fetch_assoc()) {
-														$clases[] = $row;
+														$clase[] = $row;
 													}
-													return $clases;
+													return $clase;
 												} else {
 													return [];
 												}
@@ -532,32 +534,34 @@ License: For each use you must have a valid license purchased only from above li
 											?>
 											<?php
 											// Obtener los datos de los usuarios desde la base de datos
-											$clases = obtenerClases(); // Esta función debe devolver un array de usuarios
+											$clase = obtenerClase(); // Esta función debe devolver un array de usuarios
 											
 											?>
 											
 											<!--begin::Table body-->
 											<tbody class="fw-bold text-gray-600">
-												<?php foreach ($clases as $clase): ?>
+												<?php foreach ($clase as $clases): ?>
 													<tr>
 														<!--begin::Checkbox-->
 
 														<!--end::Checkbox-->
 														<!--begin::ID-->
-														<td><?= $clase['id'] ?></td>
+														<td><?= $clases['id'] ?></td>
 														<!--end::ID-->
 														<!--begin::Nombre-->
 														<td>
-															<?= $clase['duracion'] ?></a>
+															<?= $clases['id_monitor'] ?></a>
 														</td>
 														<!--end::Nombre-->
 														<!--begin::Email-->
 														<td>
-															<?= $clase['capacidad'] ?></a>
+															<?= $clases['duracion'] ?></a>
 														</td>
 														<!--end::Email-->
 														<!--begin::Telefono-->
-														<td><?= $clase['fecha_hora'] ?></td>
+														<td><?= $clases['capacidad'] ?></td>
+														<td><?= $clases['fecha_hora'] ?></td>
+
 														<!--end::Telefono-->
 													</tr>
 												<?php endforeach; ?>

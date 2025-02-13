@@ -12,7 +12,7 @@ License: For each use you must have a valid license purchased only from above li
 -->
 <html lang="en">
 	<!--begin::Head-->
-	<head><base href="../../../">
+	<head>
 		<title>Metronic - the world's #1 selling Bootstrap Admin Theme Ecosystem for HTML, Vue, React, Angular &amp; Laravel by Keenthemes</title>
 		<meta name="description" content="The most advanced Bootstrap Admin Theme on Themeforest trusted by 94,000 beginners and professionals. Multi-demo, Dark Mode, RTL support and complete React, Angular, Vue &amp; Laravel versions. Grab your copy now and get life-time updates for free." />
 		<meta name="keywords" content="Metronic, bootstrap, bootstrap 5, Angular, VueJs, React, Laravel, admin themes, web design, figma, web development, free templates, free admin themes, bootstrap theme, bootstrap template, bootstrap dashboard, bootstrap dak mode, bootstrap button, bootstrap datepicker, bootstrap timepicker, fullcalendar, datatables, flaticon" />
@@ -41,25 +41,24 @@ License: For each use you must have a valid license purchased only from above li
 			<!--begin::Authentication - Sign-in -->
 			<div class="d-flex flex-column flex-column-fluid bgi-position-y-bottom position-x-center bgi-no-repeat bgi-size-contain bgi-attachment-fixed" style="background-image: url(assets/media/illustrations/sketchy-1/14.png">
 				<!--begin::Content-->
-				<div class="d-flex flex-center flex-column flex-column-fluid p-10 pb-lg-20">
+				<div class="d-flex flex-center flex-column flex-column-fluid ">
 					<!--begin::Logo-->
-					<a href="../../demo1/dist/index.html" class="mb-12">
-						<img alt="Logo" src="assets/media/logos/logo-1.svg" class="h-40px" />
+					<a href="http://localhost/padel_elite/public/" class="mb-12">
+						<img alt="Logo" src="assets/media/logos/padel.svg" class="h-100px" />
 					</a>
 					<!--end::Logo-->
 					<!--begin::Wrapper-->
-					<div class="w-lg-500px bg-body rounded shadow-sm p-10 p-lg-15 mx-auto">
+					<div class="w-lg-500px bg-body rounded shadow-sm  p-lg-15 mx-auto">
 						<!--begin::Form-->
-						<form class="form w-100" novalidate="novalidate" id="kt_sign_in_form" action="#">
+						<form class="form w-100" novalidate="novalidate" id="kt_sign_in_form" action="authenticate.php" method="POST">
 							<!--begin::Heading-->
 							<div class="text-center mb-10">
 								<!--begin::Title-->
-								<h1 class="text-dark mb-3">Sign In to Metronic</h1>
+								<h1 class="text-dark mb-3">Iniciar Sesión</h1>
 								<!--end::Title-->
 								<!--begin::Link-->
-								<div class="text-gray-400 fw-bold fs-4">New Here?
-								<a href="../../demo1/dist/authentication/flows/basic/sign-up.html" class="link-primary fw-bolder">Create an Account</a></div>
-								<!--end::Link-->
+								<div class="text-gray-400 fw-bold fs-4">¿No tienes cuenta?
+								<a href="<?= base_url('signUp') ?>" class="link-primary fw-bolder">Crea una cuenta</a></div>								<!--end::Link-->
 							</div>
 							<!--begin::Heading-->
 							<!--begin::Input group-->
@@ -77,10 +76,10 @@ License: For each use you must have a valid license purchased only from above li
 								<!--begin::Wrapper-->
 								<div class="d-flex flex-stack mb-2">
 									<!--begin::Label-->
-									<label class="form-label fw-bolder text-dark fs-6 mb-0">Password</label>
+									<label class="form-label fw-bolder text-dark fs-6 mb-0">Contraseña</label>
 									<!--end::Label-->
 									<!--begin::Link-->
-									<a href="../../demo1/dist/authentication/flows/basic/password-reset.html" class="link-primary fs-6 fw-bolder">Forgot Password ?</a>
+									<a href="../../demo1/dist/authentication/flows/basic/password-reset.html" class="link-primary fs-6 fw-bolder">Recuperar Contraseña</a>
 									<!--end::Link-->
 								</div>
 								<!--end::Wrapper-->
@@ -93,26 +92,13 @@ License: For each use you must have a valid license purchased only from above li
 							<div class="text-center">
 								<!--begin::Submit button-->
 								<button type="submit" id="kt_sign_in_submit" class="btn btn-lg btn-primary w-100 mb-5">
-									<span class="indicator-label">Continue</span>
-									<span class="indicator-progress">Please wait...
+									<span class="indicator-label">Continuar</span>
+									<span class="indicator-progress">Porfavor, Espera...
 									<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
 								</button>
 								<!--end::Submit button-->
 								<!--begin::Separator-->
-								<div class="text-center text-muted text-uppercase fw-bolder mb-5">or</div>
-								<!--end::Separator-->
-								<!--begin::Google link-->
-								<a href="#" class="btn btn-flex flex-center btn-light btn-lg w-100 mb-5">
-								<img alt="Logo" src="assets/media/svg/brand-logos/google-icon.svg" class="h-20px me-3" />Continue with Google</a>
-								<!--end::Google link-->
-								<!--begin::Google link-->
-								<a href="#" class="btn btn-flex flex-center btn-light btn-lg w-100 mb-5">
-								<img alt="Logo" src="assets/media/svg/brand-logos/facebook-4.svg" class="h-20px me-3" />Continue with Facebook</a>
-								<!--end::Google link-->
-								<!--begin::Google link-->
-								<a href="#" class="btn btn-flex flex-center btn-light btn-lg w-100">
-								<img alt="Logo" src="assets/media/svg/brand-logos/apple-black.svg" class="h-20px me-3" />Continue with Apple</a>
-								<!--end::Google link-->
+								
 							</div>
 							<!--end::Actions-->
 						</form>

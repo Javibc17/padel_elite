@@ -160,7 +160,7 @@ License: For each use you must have a valid license purchased only from above li
 									<div class="menu-sub menu-sub-accordion">
 									
 										<div class="menu-item">
-											<a class="menu-link" href="../../apps/customers/list.html">
+											<a class="menu-link" href="<?= base_url('pistas') ?>">
 												<span class="menu-bullet">
 													<span class="bullet bullet-dot"></span>
 												</span>
@@ -168,7 +168,7 @@ License: For each use you must have a valid license purchased only from above li
 											</a>
 										</div>
 										<div class="menu-item">
-											<a class="menu-link" href="../../apps/customers/view.html">
+											<a class="menu-link" href="<?= base_url('clasesUsuario') ?>">
 												<span class="menu-bullet">
 													<span class="bullet bullet-dot"></span>
 												</span>
@@ -225,7 +225,7 @@ License: For each use you must have a valid license purchased only from above li
 								</div>
 								
 								<div class="menu-item">
-									<a class="menu-link" href="views/apps/calendar.php">
+									<a class="menu-link" href="<?= base_url('calendar') ?>">
 										<span class="menu-icon">
 											<!--begin::Svg Icon | path: icons/duotune/general/gen014.svg-->
 											<span class="svg-icon svg-icon-2">
@@ -490,7 +490,7 @@ License: For each use you must have a valid license purchased only from above li
 												<!--begin::Table row-->
 												<tr class="text-start text-gray-400 fw-bolder fs-7 text-uppercase gs-0">
 													
-													<th class="min-w-125px">ID</th>
+													
 													<th class="min-w-125px">Nombre</th>
 													<th class="min-w-125px">Email</th>
 													<th class="min-w-125px">Teléfono</th>
@@ -511,7 +511,7 @@ License: For each use you must have a valid license purchased only from above li
 												}
 											
 												// Consultar los datos de los usuarios
-												$sql = "SELECT id, nombre, email, telefono FROM usuarios";
+												$sql = "SELECT  nombre, email, telefono FROM usuarios";
 												$result = $db->query($sql);
 											
 												// Verificar si hay resultados
@@ -540,12 +540,8 @@ License: For each use you must have a valid license purchased only from above li
 											<tbody class="fw-bold text-gray-600">
 												<?php foreach ($usuarios as $usuario): ?>
 													<tr>
-														<!--begin::Checkbox-->
-
-														<!--end::Checkbox-->
-														<!--begin::ID-->
-														<td><?= $usuario['id'] ?></td>
-														<!--end::ID-->
+														
+														<!--begin::ID-->														<!--end::ID-->
 														<!--begin::Nombre-->
 														<td>
 															<?= $usuario['nombre'] ?></a>

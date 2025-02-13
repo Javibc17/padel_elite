@@ -1,0 +1,160 @@
+CRITICAL - 2025-02-13 07:07:31 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "authentication/basic/signIn.php"
+[Method: GET, Route: signIn]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('authentication/basic/signIn.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('authentication/basic/signIn', [], true)
+ 3 APPPATH\Controllers\signinController.php(9): view('authentication/basic/signIn')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SigninController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SigninController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-13 07:08:32 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "authentication/basic/signIn.php"
+[Method: GET, Route: signIn]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('authentication/basic/signIn.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('authentication/basic/signIn', [], true)
+ 3 APPPATH\Controllers\signinController.php(9): view('authentication/basic/signIn')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SigninController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SigninController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-13 07:10:25 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "authentication/basic/signIn.php"
+[Method: GET, Route: signIn]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('authentication/basic/signIn.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('authentication/basic/signIn', [], true)
+ 3 APPPATH\Controllers\signinController.php(9): view('authentication/basic/signIn')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SigninController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SigninController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-13 07:10:30 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "authentication/basic/signIn.php"
+[Method: GET, Route: signIn]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('authentication/basic/signIn.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('authentication/basic/signIn', [], true)
+ 3 APPPATH\Controllers\signinController.php(9): view('authentication/basic/signIn')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SigninController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SigninController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-13 07:11:02 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "authentication/basic/signIn.php"
+[Method: GET, Route: signIn]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('authentication/basic/signIn.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('authentication/basic/signIn', [], true)
+ 3 APPPATH\Controllers\SigninController.php(9): view('authentication/basic/signIn')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SigninController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SigninController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-02-13 12:37:47 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\wamp64\www\padel_elite\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\wamp64\www\padel_elite\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 C:\wamp64\www\padel_elite\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\wamp64\www\padel_elite\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\wamp64\www\padel_elite\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\wamp64\www\padel_elite\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\padel_elite\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\padel_elite\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\padel_elite\app\Controllers\SignUpController.php(25): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\padel_elite\system\CodeIgniter.php(933): App\Controllers\SignUpController->store()
+#9 C:\wamp64\www\padel_elite\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignUpController))
+#10 C:\wamp64\www\padel_elite\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\padel_elite\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\wamp64\www\padel_elite\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\wamp64\www\padel_elite\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\wamp64\www\padel_elite\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\wamp64\www\padel_elite\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\wamp64\www\padel_elite\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\padel_elite\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#3 C:\wamp64\www\padel_elite\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#4 C:\wamp64\www\padel_elite\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#5 C:\wamp64\www\padel_elite\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#6 C:\wamp64\www\padel_elite\app\Controllers\SignUpController.php(25): CodeIgniter\Model->insert(Array)
+#7 C:\wamp64\www\padel_elite\system\CodeIgniter.php(933): App\Controllers\SignUpController->store()
+#8 C:\wamp64\www\padel_elite\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignUpController))
+#9 C:\wamp64\www\padel_elite\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\padel_elite\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\wamp64\www\padel_elite\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\wamp64\www\padel_elite\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-02-13 12:37:47 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: POST, Route: signUp/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuarios` (`nombre`, `telefono`, `email`, `contraseña`) VALUES (:nombre:, :telefono:, :email:, :contraseña:)', [...], false)
+ 3 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 4 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 5 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 6 APPPATH\Controllers\SignUpController.php(25): CodeIgniter\Model->insert([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SignUpController->store()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignUpController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-02-13 12:37:58 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\wamp64\www\padel_elite\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\wamp64\www\padel_elite\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 C:\wamp64\www\padel_elite\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\wamp64\www\padel_elite\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\wamp64\www\padel_elite\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\wamp64\www\padel_elite\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\padel_elite\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\padel_elite\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\padel_elite\app\Controllers\SignUpController.php(25): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\padel_elite\system\CodeIgniter.php(933): App\Controllers\SignUpController->store()
+#9 C:\wamp64\www\padel_elite\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignUpController))
+#10 C:\wamp64\www\padel_elite\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\padel_elite\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\wamp64\www\padel_elite\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\wamp64\www\padel_elite\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\wamp64\www\padel_elite\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\wamp64\www\padel_elite\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\wamp64\www\padel_elite\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\padel_elite\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#3 C:\wamp64\www\padel_elite\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#4 C:\wamp64\www\padel_elite\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#5 C:\wamp64\www\padel_elite\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#6 C:\wamp64\www\padel_elite\app\Controllers\SignUpController.php(25): CodeIgniter\Model->insert(Array)
+#7 C:\wamp64\www\padel_elite\system\CodeIgniter.php(933): App\Controllers\SignUpController->store()
+#8 C:\wamp64\www\padel_elite\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignUpController))
+#9 C:\wamp64\www\padel_elite\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\padel_elite\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\wamp64\www\padel_elite\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\wamp64\www\padel_elite\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-02-13 12:37:58 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: POST, Route: signUp/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuarios` (`nombre`, `telefono`, `email`, `contraseña`) VALUES (:nombre:, :telefono:, :email:, :contraseña:)', [...], false)
+ 3 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 4 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 5 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 6 APPPATH\Controllers\SignUpController.php(25): CodeIgniter\Model->insert([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SignUpController->store()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignUpController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

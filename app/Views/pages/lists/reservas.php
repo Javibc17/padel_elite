@@ -160,7 +160,7 @@ License: For each use you must have a valid license purchased only from above li
 									<div class="menu-sub menu-sub-accordion">
 									
 										<div class="menu-item">
-											<a class="menu-link" href="../../apps/customers/list.html">
+											<a class="menu-link" href="<?= base_url('pistas') ?>">
 												<span class="menu-bullet">
 													<span class="bullet bullet-dot"></span>
 												</span>
@@ -168,7 +168,7 @@ License: For each use you must have a valid license purchased only from above li
 											</a>
 										</div>
 										<div class="menu-item">
-											<a class="menu-link" href="../../apps/customers/view.html">
+											<a class="menu-link" href="<?= base_url('clasesUsuario') ?>">
 												<span class="menu-bullet">
 													<span class="bullet bullet-dot"></span>
 												</span>
@@ -225,7 +225,7 @@ License: For each use you must have a valid license purchased only from above li
 								</div>
 								
 								<div class="menu-item">
-									<a class="menu-link" href="views/apps/calendar.php">
+									<a class="menu-link" href="<?= base_url('calendar') ?>">
 										<span class="menu-icon">
 											<!--begin::Svg Icon | path: icons/duotune/general/gen014.svg-->
 											<span class="svg-icon svg-icon-2">
@@ -489,18 +489,9 @@ License: For each use you must have a valid license purchased only from above li
 											<thead>
 												<!--begin::Table row-->
 												<tr class="text-start text-gray-400 fw-bolder fs-7 text-uppercase gs-0">
-													
-													<th class="min-w-125px">ID</th>
-													<th class="min-w-125px">ID_Cliente</th>
-													<th class="min-w-125px">ID_Monitor</th>
-													<th class="min-w-125px">ID_Pista</th>
-													<th class="min-w-125px">ID_Clase</th>
-
 													<th class="min-w-125px">Fecha</th>
 													<th class="min-w-125px">Hora</th>
 													<th class="min-w-125px">Tipo</th>
-
-
 												</tr>
 												<!--end::Table row-->
 											</thead>
@@ -516,7 +507,7 @@ License: For each use you must have a valid license purchased only from above li
 												}
 
 												// Consultar los datos de las reservas
-												$sql = "SELECT id, id_cliente, id_monitor, id_pista, id_clase, fecha, hora, tipo FROM reservas";
+												$sql = "SELECT fecha, hora, tipo FROM reservas";
 												$result = $db->query($sql);
 
 												// Verificar si hay resultados
@@ -547,11 +538,6 @@ License: For each use you must have a valid license purchased only from above li
 												<?php foreach ($reservas as $reserva): ?>
 													<tr>
 														<!-- Mostrar los datos de la reserva -->
-														<td><?php echo htmlspecialchars($reserva['id']); ?></td>
-														<td><?php echo htmlspecialchars($reserva['id_cliente']); ?></td>
-														<td><?php echo htmlspecialchars($reserva['id_monitor']); ?></td>
-														<td><?php echo htmlspecialchars($reserva['id_pista']); ?></td>
-														<td><?php echo htmlspecialchars($reserva['id_clase']); ?></td>
 														<td><?php echo htmlspecialchars($reserva['fecha']); ?></td>
 														<td><?php echo htmlspecialchars($reserva['hora']); ?></td>
 														<td><?php echo htmlspecialchars($reserva['tipo']); ?></td>
