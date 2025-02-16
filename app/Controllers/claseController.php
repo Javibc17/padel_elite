@@ -2,10 +2,15 @@
 
 namespace App\Controllers;
 
+use App\Models\ClaseModel;
+
 class ClaseController extends BaseController
 {
-    public function index(): string
+    public function index()
     {
-        return view('pages/lists/clases');
+        $claseModel = new ClaseModel();
+        $data['clase'] = $claseModel->findAll();
+
+        return view('pages/lists/clases', $data);
     }
 }
