@@ -503,60 +503,30 @@ License: For each use you must have a valid license purchased only from above li
 											</thead>
 											<!--end::Table head-->
 											<!--begin::Table body-->
-											<?php
-											function obtenerPista() {
-												// Conectar a la base de datos
-												$db = new mysqli('localhost', 'root', '', 'padel_elite');
-											
-												// Verificar la conexión
-												if ($db->connect_error) {
-													die("La conexión falló: " . $db->connect_error);
-												}
-											
-												// Consultar los datos de los usuarios
-												$sql = "SELECT  nombre, estado FROM pista";
-												$result = $db->query($sql);
-											
-												// Verificar si hay resultados
-												if ($result->num_rows > 0) {
-													// Almacenar los datos en un array
-													$pistas = [];
-													while($row = $result->fetch_assoc()) {
-														$pistas[] = $row;
-													}
-													return $pistas;
-												} else {
-													return [];
-												}
-											
-												// Cerrar la conexión
-												$db->close();
-											}
-											?>
-											<?php
-											// Obtener los datos de los usuarios desde la base de datos
-											$pistas = obtenerPista(); // Esta función debe devolver un array de usuarios
-											
-											?>
-											
-											<!--begin::Table body-->
 											<tbody class="fw-bold text-gray-600">
 												<?php foreach ($pistas as $pista): ?>
 													<tr>
+														
+
 														<td>
-															<?= $pista['nombre'] ?>
+															<?= esc($pista['nombre']) ?></a>
 														</td>
-													
+
 														<td>
-															<?= $pista['estado'] ?>
-														</td>			
+															<?= esc($pista['estado']) ?></a>
+														</td>
+
+														
 													</tr>
 												<?php endforeach; ?>
+												
 											</tbody>
 											<!--end::Table body-->
 										</table>
-										<!--end::Table-->
-									</div>
+
+										<div class="mt-4">
+											<?= $pager->links("default", "custom_pagination") ?>
+										</div>
 									<!--end::Card body-->
 								</div>
 								<!--end::Card-->

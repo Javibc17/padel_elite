@@ -13,29 +13,33 @@ License: For each use you must have a valid license purchased only from above li
 <html lang="en">
 	<!--begin::Head-->
 	<head>
-		<title>PADEL ELITE</title>
-		<meta name="description" content="The most advanced Bootstrap Admin Theme on Themeforest trusted by 94,000 beginners and professionals. Multi-demo, Dark Mode, RTL support and complete React, Angular, Vue &amp; Laravel versions. Grab your copy now and get life-time updates for free." />
-		<meta name="keywords" content="Metronic, bootstrap, bootstrap 5, Angular, VueJs, React, Laravel, admin themes, web design, figma, web development, free templates, free admin themes, bootstrap theme, bootstrap template, bootstrap dashboard, bootstrap dak mode, bootstrap button, bootstrap datepicker, bootstrap timepicker, fullcalendar, datatables, flaticon" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta charset="utf-8" />
-		<meta property="og:locale" content="en_US" />
-		<meta property="og:type" content="article" />
-		<meta property="og:title" content="Metronic - Bootstrap 5 HTML, VueJS, React, Angular &amp; Laravel Admin Dashboard Theme" />
-		<meta property="og:url" content="https://keenthemes.com/metronic" />
-		<meta property="og:site_name" content="Keenthemes | Metronic" />
-		<link rel="canonical" href="https://preview.keenthemes.com/metronic8" />
-		<link rel="shortcut icon" href="assets/media/logos/favicon.png" />
-		<!--begin::Fonts-->
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
-		<!--end::Fonts-->
-		<!--begin::Page Vendor Stylesheets(used by this page)-->
-		<link href="assets/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
-		<!--end::Page Vendor Stylesheets-->
-		<!--begin::Global Stylesheets Bundle(used by all pages)-->
-		<link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
-		<link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
-		<!--end::Global Stylesheets Bundle-->
-	</head>
+    <title>PADEL ELITE</title>
+    <meta name="description" content="The most advanced Bootstrap Admin Theme on Themeforest trusted by 94,000 beginners and professionals. Multi-demo, Dark Mode, RTL support and complete React, Angular, Vue &amp; Laravel versions. Grab your copy now and get life-time updates for free." />
+    <meta name="keywords" content="Metronic, bootstrap, bootstrap 5, Angular, VueJs, React, Laravel, admin themes, web design, figma, web development, free templates, free admin themes, bootstrap theme, bootstrap template, bootstrap dashboard, bootstrap dak mode, bootstrap button, bootstrap datepicker, bootstrap timepicker, fullcalendar, datatables, flaticon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Metronic - Bootstrap 5 HTML, VueJS, React, Angular &amp; Laravel Admin Dashboard Theme" />
+    <meta property="og:url" content="https://keenthemes.com/metronic" />
+    <meta property="og:site_name" content="Keenthemes | Metronic" />
+    <link rel="canonical" href="https://preview.keenthemes.com/metronic8" />
+    <link rel="shortcut icon" href="assets/media/logos/favicon.png" />
+    <!--begin::Fonts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
+    <!--end::Fonts-->
+    <!--begin::Page Vendor Stylesheets(used by this page)-->
+    <link href="assets/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
+    <!--end::Page Vendor Stylesheets-->
+    <!--begin::Global Stylesheets Bundle(used by all pages)-->
+    <link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+    <!--end::Global Stylesheets Bundle-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+    <!-- Include jQuery -->
+    <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <!-- Include DataTables JS -->
+    
 	<!--end::Head-->
 	<!--begin::Body-->
 	<body id="kt_body" class="header-fixed header-tablet-and-mobile-fixed toolbar-enabled toolbar-fixed aside-enabled aside-fixed" style="--kt-toolbar-height:55px;--kt-toolbar-height-tablet-and-mobile:55px">
@@ -497,53 +501,22 @@ License: For each use you must have a valid license purchased only from above li
 											</thead>
 											<!--end::Table head-->
 											<!--begin::Table body-->
-											<?php
-											function obtenerReservas() {
-												$db = new mysqli('localhost', 'root', '', 'padel_elite');
-
-												// Verificar la conexión
-												if ($db->connect_error) {
-													die("La conexión falló: " . $db->connect_error);
-												}
-
-												// Consultar los datos de las reservas
-												$sql = "SELECT fecha, hora, tipo FROM reservas";
-												$result = $db->query($sql);
-
-												// Verificar si hay resultados
-												if ($result === false) {
-													die("Error en la consulta SQL: " . $db->error);
-												}
-
-												if ($result->num_rows > 0) {
-													// Almacenar los datos en un array
-													$reservas = [];
-													while($row = $result->fetch_assoc()) {
-														$reservas[] = $row;
-													}
-													$db->close();
-													return $reservas;
-												} else {
-													$db->close();
-													return [];
-												}
-											}
-											?>
-
-											<?php
-											// Obtener los datos de las reservas desde la base de datos
-											$reservas = obtenerReservas(); // Esta función debe devolver un array de reservas
-											?>
 											<tbody class="fw-bold text-gray-600">
 												<?php foreach ($reservas as $reserva): ?>
 													<tr>
-														<!-- Mostrar los datos de la reserva -->
-														<td><?php echo htmlspecialchars($reserva['fecha']); ?></td>
-														<td><?php echo htmlspecialchars($reserva['hora']); ?></td>
-														<td><?php echo htmlspecialchars($reserva['tipo']); ?></td>
+														<td><?= esc($reserva['fecha']) ?></td>
+														<td><?= esc($reserva['hora']) ?></td>
+														<td><?= esc($reserva['tipo']) ?></td>
 													</tr>
 												<?php endforeach; ?>
 											</tbody>
+											<!--end::Table body-->
+										</table>
+
+										<div class="mt-4">
+											<?= $pager->links("default", "custom_pagination") ?>
+										</div>
+											
 											<!--end::Table body-->
 												
 											<!--end::Table body-->
@@ -4305,6 +4278,10 @@ License: For each use you must have a valid license purchased only from above li
 		<script src="assets/js/custom/apps/chat/chat.js"></script>
 		<script src="assets/js/custom/modals/create-app.js"></script>
 		<script src="assets/js/custom/modals/upgrade-plan.js"></script>
+
+		
+
+		
 		<!--end::Page Custom Javascript-->
 		<!--end::Javascript-->
 	</body>

@@ -39,184 +39,7 @@ License: For each use you must have a valid license purchased only from above li
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
 </head>
 <body id="kt_body" class="header-fixed header-tablet-and-mobile-fixed toolbar-enabled toolbar-fixed aside-enabled aside-fixed" style="--kt-toolbar-height:55px;--kt-toolbar-height-tablet-and-mobile:55px">
-	<!-- Filter Modal -->
-	<div class="modal fade" id="filterModal" tabindex="-1" aria-labelledby="filterModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="filterModalLabel">Filter</h5>
-					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-				</div>
-				<div class="modal-body">
-					<form id="filterForm">
-						<div class="mb-3">
-							<label for="filterID" class="form-label">ID</label>
-							<input type="text" class="form-control" id="filterID" placeholder="Buscar ID">
-						</div>
-						<div class="mb-3">
-							<label for="filterIDMonitor" class="form-label">ID Monitor</label>
-							<input type="text" class="form-control" id="filterIDMonitor" placeholder="Buscar ID Monitor">
-						</div>
-						<div class="mb-3">
-							<label for="filterDuracion" class="form-label">Duracion</label>
-							<input type="text" class="form-control" id="filterDuracion" placeholder="Buscar Duracion">
-						</div>
-						<div class="mb-3">
-							<label for="filterCapacidad" class="form-label">Capacidad</label>
-							<input type="text" class="form-control" id="filterCapacidad" placeholder="Buscar Capacidad">
-						</div>
-						<div class="mb-3">
-							<label for="filterFechaHora" class="form-label">Fecha y Hora</label>
-							<input type="text" class="form-control" id="filterFechaHora" placeholder="Buscar Fecha y Hora">
-						</div>
-					</form>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-					<button type="button" class="btn btn-primary" id="applyFilters">Apply Filters</button>
-				</div>
-			</div>
-		</div>
-	</div>
 
-	<!-- DataTables JS -->
-	<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
-	<script>
-		$(document).ready(function() {
-			// DataTable
-			var table = $('#kt_customers_table').DataTable();
-
-			// Apply the search
-			$('#applyFilters').on('click', function() {
-				table.column(0).search($('#filterID').val()).draw();
-				table.column(1).search($('#filterIDMonitor').val()).draw();
-				table.column(2).search($('#filterDuracion').val()).draw();
-				table.column(3).search($('#filterCapacidad').val()).draw();
-				table.column(4).search($('#filterFechaHora').val()).draw();
-				$('#filterModal').modal('hide');
-			});
-		});
-	</script>
-
-	<div class="d-flex justify-content-end" data-kt-customer-table-toolbar="base">
-		<!--begin::Filter-->
-		<button type="button" class="btn btn-light-primary me-3" data-bs-toggle="modal" data-bs-target="#filterModal">
-			<!--begin::Svg Icon | path: icons/duotune/general/gen031.svg-->
-			<span class="svg-icon svg-icon-2">
-				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-					<path d="M19.0759 3H4.72777C3.95892 3 3.47768 3.83148 3.86067 4.49814L8.56967 12.6949C9.17923 13.7559 9.5 14.9582 9.5 16.1819V19.5072C9.5 20.2189 10.2223 20.7028 10.8805 20.432L13.8805 19.1977C14.2553 19.0435 14.5 18.6783 14.5 18.273V13.8372C14.5 12.8089 14.8171 11.8056 15.408 10.964L19.8943 4.57465C20.3596 3.912 19.8856 3 19.0759 3Z" fill="black" />
-				</svg>
-			</span>
-			<!--end::Svg Icon-->Filter
-		</button>
-		<!--end::Filter-->
-	</div>
-
-	<table class="table align-middle table-row-dashed fs-6 gy-5" id="kt_customers_table">
-		<!--begin::Table head-->
-		<thead>
-			<!--begin::Table row-->
-			<tr class="text-start text-gray-400 fw-bolder fs-7 text-uppercase gs-0">
-				<th class="min-w-125px">ID</th>
-				<th class="min-w-125px">ID_Monitor</th>
-				<th class="min-w-125px">Duracion</th>
-				<th class="min-w-125px">Capacidad</th>
-				<th class="min-w-125px">Fecha y Hora</th>
-			</tr>
-			<!--end::Table row-->
-		</thead>
-		<!--end::Table head-->
-		<!--begin::Table body-->
-		<tbody class="fw-bold text-gray-600">
-			<?php foreach ($clase as $clases): ?>
-				<tr>
-					<td><?= $clases['id'] ?></td>
-					<td><?= $clases['id_monitor'] ?></td>
-					<td><?= $clases['duracion'] ?></td>
-					<td><?= $clases['capacidad'] ?></td>
-					<td><?= $clases['fecha_hora'] ?></td>
-				</tr>
-			<?php endforeach; ?>
-		</tbody>
-		<!--end::Table body-->
-	</table>
-	<!--begin::Head-->
-	<head>
-		<title>PADEL ELITE</title>
-		<meta name="description" content="The most advanced Bootstrap Admin Theme on Themeforest trusted by 94,000 beginners and professionals. Multi-demo, Dark Mode, RTL support and complete React, Angular, Vue &amp; Laravel versions. Grab your copy now and get life-time updates for free." />
-		<meta name="keywords" content="Metronic, bootstrap, bootstrap 5, Angular, VueJs, React, Laravel, admin themes, web design, figma, web development, free templates, free admin themes, bootstrap theme, bootstrap template, bootstrap dashboard, bootstrap dak mode, bootstrap button, bootstrap datepicker, bootstrap timepicker, fullcalendar, datatables, flaticon" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta charset="utf-8" />
-		<meta property="og:locale" content="en_US" />
-		<meta property="og:type" content="article" />
-		<meta property="og:title" content="Metronic - Bootstrap 5 HTML, VueJS, React, Angular &amp; Laravel Admin Dashboard Theme" />
-		<meta property="og:url" content="https://keenthemes.com/metronic" />
-		<meta property="og:site_name" content="Keenthemes | Metronic" />
-		<link rel="canonical" href="https://preview.keenthemes.com/metronic8" />
-		<link rel="shortcut icon" href="assets/media/logos/favicon.png" />
-		<!--begin::Fonts-->
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
-		<!--end::Fonts-->
-		<!--begin::Page Vendor Stylesheets(used by this page)-->
-		<link href="assets/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
-		<!--end::Page Vendor Stylesheets-->
-		<!--begin::Global Stylesheets Bundle(used by all pages)-->
-		<link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
-		<link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
-		<!--end::Global Stylesheets Bundle-->
-	<!-- DataTables CSS -->
-	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
-	</head>
-	<!--end::Head-->
-	<!--begin::Body-->
-	<body id="kt_body" class="header-fixed header-tablet-and-mobile-fixed toolbar-enabled toolbar-fixed aside-enabled aside-fixed" style="--kt-toolbar-height:55px;--kt-toolbar-height-tablet-and-mobile:55px">
-		<!-- Filter Button -->
-		<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#filterModal">
-			Filter
-		</button>
-
-		<!-- Filter Modal -->
-		<div class="modal fade" id="filterModal" tabindex="-1" aria-labelledby="filterModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="filterModalLabel">Filter</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="filterForm">
-                        <div class="mb-3">
-                            <label for="filterID" class="form-label">ID</label>
-                            <input type="text" class="form-control" id="filterID" placeholder="Buscar ID">
-                        </div>
-                        <div class="mb-3">
-                            <label for="filterIDMonitor" class="form-label">ID Monitor</label>
-                            <input type="text" class="form-control" id="filterIDMonitor" placeholder="Buscar ID Monitor">
-                        </div>
-                        <div class="mb-3">
-                            <label for="filterDuracion" class="form-label">Duracion</label>
-                            <input type="text" class="form-control" id="filterDuracion" placeholder="Buscar Duracion">
-                        </div>
-                        <div class="mb-3">
-                            <label for="filterCapacidad" class="form-label">Capacidad</label>
-                            <input type="text" class="form-control" id="filterCapacidad" placeholder="Buscar Capacidad">
-                        </div>
-                        <div class="mb-3">
-                            <label for="filterFechaHora" class="form-label">Fecha y Hora</label>
-                            <input type="text" class="form-control" id="filterFechaHora" placeholder="Buscar Fecha y Hora">
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" id="applyFilters">Apply Filters</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-		<!--begin::Main-->
-		<!--begin::Root-->
 		<div class="d-flex flex-column flex-root">
 			<!--begin::Page-->
 			<div class="page d-flex flex-row flex-column-fluid">
@@ -666,7 +489,6 @@ License: For each use you must have a valid license purchased only from above li
 												<!--begin::Table row-->
 												<tr class="text-start text-gray-400 fw-bolder fs-7 text-uppercase gs-0">
 													
-													<th class="min-w-125px">ID</th>
 													<th class="min-w-125px">ID_Monitor</th>
 													<th class="min-w-125px">Duracion</th>
 													<th class="min-w-125px">Capacidad</th>
@@ -708,40 +530,34 @@ License: For each use you must have a valid license purchased only from above li
 												$db->close();
 											}
 											?>
-											<?php
-											// Obtener los datos de los usuarios desde la base de datos
-											$clase = obtenerClase(); // Esta función debe devolver un array de usuarios
-											
-											?>
-											
-											<!--begin::Table body-->
 											<tbody class="fw-bold text-gray-600">
-												<?php foreach ($clase as $clases): ?>
+												<?php foreach ($clases as $clase): ?>
 													<tr>
-														<!--begin::Checkbox-->
+														
 
-														<!--end::Checkbox-->
-														<!--begin::ID-->
-														<td><?= $clases['id'] ?></td>
-														<!--end::ID-->
-														<!--begin::Nombre-->
 														<td>
-															<?= $clases['id_monitor'] ?></a>
+															<?= esc($clase['id_monitor']) ?></a>
 														</td>
-														<!--end::Nombre-->
-														<!--begin::Email-->
-														<td>
-															<?= $clases['duracion'] ?></a>
-														</td>
-														<!--end::Email-->
-														<!--begin::Telefono-->
-														<td><?= $clases['capacidad'] ?></td>
-														<td><?= $clases['fecha_hora'] ?></td>
 
-														<!--end::Telefono-->
+														<td>
+															<?= $clase['duracion'] ?></a>
+														</td>
+
+														<td><?= $clase['capacidad'] ?></td>
+
+														<td><?= $clase['fecha_hora'] ?></td>
+
+														
 													</tr>
 												<?php endforeach; ?>
+												
 											</tbody>
+											<!--end::Table body-->
+										</table>
+
+										<div class="mt-4">
+											<?= $pager->links("default", "custom_pagination") ?>
+										</div>
 											<!--end::Table body-->
 										</table>
 										<!--end::Table-->
@@ -4484,137 +4300,13 @@ License: For each use you must have a valid license purchased only from above li
 		</div>
 		<!--end::Scrolltop-->
 		<!-- Filter Modal -->
-		<div class="modal fade" id="filterModal" tabindex="-1" aria-labelledby="filterModalLabel" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5 class="modal-title" id="filterModalLabel">Filter</h5>
-						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-					</div>
-					<div class="modal-body">
-						<form id="filterForm">
-							<div class="mb-3">
-								<label for="filterID" class="form-label">ID</label>
-								<input type="text" class="form-control" id="filterID">
-							</div>
-							<div class="mb-3">
-								<label for="filterIDMonitor" class="form-label">ID Monitor</label>
-								<input type="text" class="form-control" id="filterIDMonitor">
-							</div>
-							<div class="mb-3">
-								<label for="filterDuracion" class="form-label">Duración</label>
-								<input type="text" class="form-control" id="filterDuracion">
-							</div>
-							<div class="mb-3">
-								<label for="filterCapacidad" class="form-label">Capacidad</label>
-								<input type="text" class="form-control" id="filterCapacidad">
-							</div>
-							<div class="mb-3">
-								<label for="filterFechaHora" class="form-label">Fecha y Hora</label>
-								<input type="text" class="form-control" id="filterFechaHora">
-							</div>
-						</form>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-						<button type="button" class="btn btn-primary" id="applyFilters">Apply Filters</button>
-					</div>
-				</div>
-			</div>
-		</div>
+		
+
+		
+		
 
 		<!-- DataTables JS -->
-		<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
-		<script>
-			$(document).ready(function() {
-				// DataTable
-				var table = $('#kt_customers_table').DataTable();
-
-				// Apply the search
-				$('#applyFilters').on('click', function() {
-					table.column(0).search($('#filterID').val()).draw();
-					table.column(1).search($('#filterIDMonitor').val()).draw();
-					table.column(2).search($('#filterDuracion').val()).draw();
-					table.column(3).search($('#filterCapacidad').val()).draw();
-					table.column(4).search($('#filterFechaHora').val()).draw();
-					$('#filterModal').modal('hide');
-				});
-			});
-		</script>
-		<!-- HTML para la tabla -->
-		<table id="kt_customers_table" class="display">
-			<thead>
-				<tr>
-					<th>ID</th>
-					<th>ID Monitor</th>
-					<th>Duración</th>
-					<th>Capacidad</th>
-					<th>Fecha y Hora</th>
-				</tr>
-			</thead>
-			<tbody>
-				<!-- Aquí irían las filas de la tabla -->
-			</tbody>
-		</table>
-
-		<!-- Filter Modal -->
-		<div class="modal fade" id="filterModal" tabindex="-1" aria-labelledby="filterModalLabel" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5 class="modal-title" id="filterModalLabel">Filter</h5>
-						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-					</div>
-					<div class="modal-body">
-						<form id="filterForm">
-							<div class="mb-3">
-								<label for="filterID" class="form-label">ID</label>
-								<input type="text" class="form-control" id="filterID">
-							</div>
-							<div class="mb-3">
-								<label for="filterIDMonitor" class="form-label">ID Monitor</label>
-								<input type="text" class="form-control" id="filterIDMonitor">
-							</div>
-							<div class="mb-3">
-								<label for="filterDuracion" class="form-label">Duración</label>
-								<input type="text" class="form-control" id="filterDuracion">
-							</div>
-							<div class="mb-3">
-								<label for="filterCapacidad" class="form-label">Capacidad</label>
-								<input type="text" class="form-control" id="filterCapacidad">
-							</div>
-							<div class="mb-3">
-								<label for="filterFechaHora" class="form-label">Fecha y Hora</label>
-								<input type="text" class="form-control" id="filterFechaHora">
-							</div>
-						</form>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-						<button type="button" class="btn btn-primary" id="applyFilters">Apply Filters</button>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- DataTables JS -->
-		<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
-		<script>
-			$(document).ready(function() {
-				// Inicializar DataTable
-				var table = $('#kt_customers_table').DataTable();
-
-				// Aplicar los filtros
-				$('#applyFilters').on('click', function() {
-					table.column(0).search($('#filterID').val()).draw();
-					table.column(1).search($('#filterIDMonitor').val()).draw();
-					table.column(2).search($('#filterDuracion').val()).draw();
-					table.column(3).search($('#filterCapacidad').val()).draw();
-					table.column(4).search($('#filterFechaHora').val()).draw();
-					$('#filterModal').modal('hide');
-				});
-			});
-		</script>
+		
 		<!--end::Main-->
 		<script>var hostUrl = "assets/";</script>
 		<!--begin::Javascript-->
@@ -4636,23 +4328,7 @@ License: For each use you must have a valid license purchased only from above li
 		<!--end::Page Custom Javascript-->
 				<!--end::Javascript-->
 	<!-- DataTables JS -->
-	<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
-    <script>
-        $(document).ready(function() {
-            // DataTable
-            var table = $('#kt_customers_table').DataTable();
-
-            // Apply the search
-            $('#applyFilters').on('click', function() {
-                table.column(0).search($('#filterID').val()).draw();
-                table.column(1).search($('#filterIDMonitor').val()).draw();
-                table.column(2).search($('#filterDuracion').val()).draw();
-                table.column(3).search($('#filterCapacidad').val()).draw();
-                table.column(4).search($('#filterFechaHora').val()).draw();
-                $('#filterModal').modal('hide');
-            });
-        });
-    </script>
+	
 
    
 	</body>

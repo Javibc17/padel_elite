@@ -7,6 +7,7 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Home::index');
 $routes->get('users', 'UserController::index');
+
 $routes->get('roles', 'RoleController::index');
 $routes->get('reservas', 'ReservaController::index');
 $routes->get('clases', 'ClaseController::index');

@@ -6,10 +6,16 @@ use App\Models\ClaseModel;
 
 class ClaseController extends BaseController
 {
-    public function index()
+    public function index(): string
     {
         $claseModel = new ClaseModel();
-        $data['clase'] = $claseModel->findAll();
+
+        $perPage = 10;
+
+        $data = [
+            'clases' => $claseModel->paginate($perPage),
+            'pager' => $claseModel->pager,
+        ];
 
         return view('pages/lists/clases', $data);
     }

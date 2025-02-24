@@ -4,12 +4,12 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class UserModel extends Model
+class ClaseusuarioModel extends Model
 {
-    protected $table = 'usuarios';
+    protected $table = 'clasesusuario';
     protected $primaryKey = 'id';
     protected $useTimestamps = true;
-    protected $allowedFields = ['nombre', 'telefono', 'email', 'contraseña', 'created_at'];
+    protected $allowedFields = ['nombre_monitor', 'fecha_hora'];
 
     protected $perPage = 10;
 

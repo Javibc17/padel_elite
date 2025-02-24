@@ -1,0 +1,205 @@
+CRITICAL - 2025-02-24 10:46:56 --> ErrorException: Undefined variable $usuarios
+[Method: GET, Route: reservas]
+in APPPATH\Views\pages\lists\reservas.php on line 506.
+ 1 APPPATH\Views\pages\lists\reservas.php(506): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuarios', 'C:\\wamp64\\www\\padel_elite\\app\\Views\\pages\\lists\\reservas.php', 506)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\padel_elite\\app\\Views\\pages\\lists\\reservas.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/lists/reservas', [], true)
+ 5 APPPATH\Controllers\reservaController.php(9): view('pages/lists/reservas')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReservaController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservaController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-24 10:47:49 --> ErrorException: Undefined variable $usuarios
+[Method: GET, Route: reservas]
+in APPPATH\Views\pages\lists\reservas.php on line 505.
+ 1 APPPATH\Views\pages\lists\reservas.php(505): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuarios', 'C:\\wamp64\\www\\padel_elite\\app\\Views\\pages\\lists\\reservas.php', 505)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\padel_elite\\app\\Views\\pages\\lists\\reservas.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/lists/reservas', [], true)
+ 5 APPPATH\Controllers\reservaController.php(9): view('pages/lists/reservas')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReservaController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservaController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-24 10:48:23 --> ErrorException: Undefined variable $reservas
+[Method: GET, Route: reservas]
+in APPPATH\Views\pages\lists\reservas.php on line 505.
+ 1 APPPATH\Views\pages\lists\reservas.php(505): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $reservas', 'C:\\wamp64\\www\\padel_elite\\app\\Views\\pages\\lists\\reservas.php', 505)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\padel_elite\\app\\Views\\pages\\lists\\reservas.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/lists/reservas', [], true)
+ 5 APPPATH\Controllers\reservaController.php(9): view('pages/lists/reservas')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReservaController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservaController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-24 10:48:29 --> ErrorException: Undefined variable $reservas
+[Method: GET, Route: reservas]
+in APPPATH\Views\pages\lists\reservas.php on line 505.
+ 1 APPPATH\Views\pages\lists\reservas.php(505): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $reservas', 'C:\\wamp64\\www\\padel_elite\\app\\Views\\pages\\lists\\reservas.php', 505)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\padel_elite\\app\\Views\\pages\\lists\\reservas.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/lists/reservas', [], true)
+ 5 APPPATH\Controllers\reservaController.php(9): view('pages/lists/reservas')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReservaController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservaController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-24 10:57:21 --> Error: Class "App\Controllers\ReservaModel" not found
+[Method: GET, Route: reservas]
+in APPPATH\Controllers\reservaController.php on line 9.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReservaController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservaController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-24 10:59:48 --> ErrorException: Undefined variable $reservas
+[Method: GET, Route: reservas]
+in APPPATH\Views\pages\lists\reservas.php on line 505.
+ 1 APPPATH\Views\pages\lists\reservas.php(505): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $reservas', 'C:\\wamp64\\www\\padel_elite\\app\\Views\\pages\\lists\\reservas.php', 505)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\padel_elite\\app\\Views\\pages\\lists\\reservas.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/lists/reservas', [], true)
+ 5 APPPATH\Controllers\reservaController.php(21): view('pages/lists/reservas', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReservaController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservaController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-24 11:01:09 --> ErrorException: Undefined variable $reservas
+[Method: GET, Route: reservas]
+in APPPATH\Views\pages\lists\reservas.php on line 505.
+ 1 APPPATH\Views\pages\lists\reservas.php(505): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $reservas', 'C:\\wamp64\\www\\padel_elite\\app\\Views\\pages\\lists\\reservas.php', 505)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\padel_elite\\app\\Views\\pages\\lists\\reservas.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/lists/reservas', [], true)
+ 5 APPPATH\Controllers\reservaController.php(21): view('pages/lists/reservas', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReservaController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservaController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-24 11:15:46 --> ErrorException: Undefined variable $usuarios
+[Method: GET, Route: clases]
+in APPPATH\Views\pages\lists\clases.php on line 534.
+ 1 APPPATH\Views\pages\lists\clases.php(534): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuarios', 'C:\\wamp64\\www\\padel_elite\\app\\Views\\pages\\lists\\clases.php', 534)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\padel_elite\\app\\Views\\pages\\lists\\clases.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/lists/clases', [], true)
+ 5 APPPATH\Controllers\claseController.php(20): view('pages/lists/clases', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClaseController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClaseController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-24 11:16:26 --> ErrorException: Undefined array key "nombre"
+[Method: GET, Route: clases]
+in APPPATH\Views\pages\lists\clases.php on line 539.
+ 1 APPPATH\Views\pages\lists\clases.php(539): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'C:\\wamp64\\www\\padel_elite\\app\\Views\\pages\\lists\\clases.php', 539)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\padel_elite\\app\\Views\\pages\\lists\\clases.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/lists/clases', [], true)
+ 5 APPPATH\Controllers\claseController.php(20): view('pages/lists/clases', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClaseController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClaseController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-24 12:26:32 --> ErrorException: Undefined variable $usuarios
+[Method: GET, Route: pistas]
+in APPPATH\Views\pages\lists\users.php on line 556.
+ 1 APPPATH\Views\pages\lists\users.php(556): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuarios', 'C:\\wamp64\\www\\padel_elite\\app\\Views\\pages\\lists\\users.php', 556)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\padel_elite\\app\\Views\\pages\\lists\\users.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/lists/users', [], true)
+ 5 APPPATH\Controllers\pistaController.php(20): view('pages/lists/users', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PistaController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PistaController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-24 12:27:30 --> ErrorException: Undefined variable $usuarios
+[Method: GET, Route: pistas]
+in APPPATH\Views\pages\lists\users.php on line 556.
+ 1 APPPATH\Views\pages\lists\users.php(556): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuarios', 'C:\\wamp64\\www\\padel_elite\\app\\Views\\pages\\lists\\users.php', 556)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\padel_elite\\app\\Views\\pages\\lists\\users.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/lists/users', [], true)
+ 5 APPPATH\Controllers\pistaController.php(20): view('pages/lists/users', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PistaController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PistaController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-24 12:27:40 --> ErrorException: Undefined variable $usuarios
+[Method: GET, Route: pistas]
+in APPPATH\Views\pages\lists\users.php on line 556.
+ 1 APPPATH\Views\pages\lists\users.php(556): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuarios', 'C:\\wamp64\\www\\padel_elite\\app\\Views\\pages\\lists\\users.php', 556)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\padel_elite\\app\\Views\\pages\\lists\\users.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/lists/users', [], true)
+ 5 APPPATH\Controllers\pistaController.php(20): view('pages/lists/users', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PistaController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PistaController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-24 12:31:06 --> ErrorException: Undefined variable $usuarios
+[Method: GET, Route: pistas]
+in APPPATH\Views\pages\lists\users.php on line 556.
+ 1 APPPATH\Views\pages\lists\users.php(556): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuarios', 'C:\\wamp64\\www\\padel_elite\\app\\Views\\pages\\lists\\users.php', 556)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\padel_elite\\app\\Views\\pages\\lists\\users.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/lists/users', [], true)
+ 5 APPPATH\Controllers\pistaController.php(20): view('pages/lists/users', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PistaController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PistaController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-24 12:57:35 --> ErrorException: Undefined variable $clasesusuario
+[Method: GET, Route: clasesUsuario]
+in APPPATH\Views\pages\lists\clasesUsuario.php on line 506.
+ 1 APPPATH\Views\pages\lists\clasesUsuario.php(506): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $clasesusuario', 'C:\\wamp64\\www\\padel_elite\\app\\Views\\pages\\lists\\clasesUsuario.php', 506)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\padel_elite\\app\\Views\\pages\\lists\\clasesUsuario.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/lists/clasesUsuario', [], true)
+ 5 APPPATH\Controllers\clasesUsuarioController.php(20): view('pages/lists/clasesUsuario', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClasesUsuarioController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClasesUsuarioController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-24 13:01:04 --> ErrorException: Undefined array key "email"
+[Method: GET, Route: roles]
+in APPPATH\Views\pages\lists\roles.php on line 506.
+ 1 APPPATH\Views\pages\lists\roles.php(506): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "email"', 'C:\\wamp64\\www\\padel_elite\\app\\Views\\pages\\lists\\roles.php', 506)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\padel_elite\\app\\Views\\pages\\lists\\roles.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/lists/roles', [], true)
+ 5 APPPATH\Controllers\roleController.php(20): view('pages/lists/roles', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RoleController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RoleController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

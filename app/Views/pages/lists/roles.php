@@ -493,65 +493,30 @@ License: For each use you must have a valid license purchased only from above li
 											</thead>
 											<!--end::Table head-->
 											<!--begin::Table body-->
-											<?php
-											function obtenerRoles()  {
-												// Conectar a la base de datos
-												$db = new mysqli('localhost', 'root', '', 'padel_elite');
-											
-												// Verificar la conexión
-												if ($db->connect_error) {
-													die("La conexión falló: " . $db->connect_error);
-												}
-											
-												// Consultar los datos de los usuarios
-												$sql = "SELECT id, nombre FROM roles";
-												$result = $db->query($sql);
-											
-												// Verificar si hay resultados
-												if ($result->num_rows > 0) {
-													// Almacenar los datos en un array
-													$roles = [];
-													while($row = $result->fetch_assoc()) {
-														$roles[] = $row;
-													}
-													return $roles;
-												} else {
-													return [];
-												}
-											
-												// Cerrar la conexión
-												$db->close();
-											}
-											?>
-											<?php
-											// Obtener los datos de los usuarios desde la base de datos
-											$roles = obtenerRoles(); // Esta función debe devolver un array de usuarios
-											
-											?>
-											
-											<!--begin::Table body-->
 											<tbody class="fw-bold text-gray-600">
 												<?php foreach ($roles as $rol): ?>
-													<tr>
-														<!--begin::Checkbox-->
-														
-														<!--end::Checkbox-->
-														<!--begin::ID-->
-														<td><?= $rol['id'] ?></td>
-														<!--end::ID-->
-														<!--begin::Nombre-->
+													<t>
 														<td>
-															<?= $rol['nombre'] ?></a>
+															<?= esc($rol['id']) ?></a>
 														</td>
-														<!--end::Nombre-->
+
+														<td>
+															<?= esc($rol['nombre']) ?></a>
+														</td>
+
+														
 														
 													</tr>
+
 												<?php endforeach; ?>
+												
 											</tbody>
 											<!--end::Table body-->
 										</table>
-										<!--end::Table-->
-									</div>
+
+										<div class="mt-4">
+											<?= $pager->links("default", "custom_pagination") ?>
+										</div>
 									<!--end::Card body-->
 								</div>
 								<!--end::Card-->

@@ -502,62 +502,31 @@ License: For each use you must have a valid license purchased only from above li
 												<!--end::Table row-->
 											</thead>
 											<!--end::Table head-->
-											<?php
-											function obtenerClasesUsuario() {
-												// Conectar a la base de datos
-												$db = new mysqli('localhost', 'root', '', 'padel_elite');
-											
-												// Verificar la conexión
-												if ($db->connect_error) {
-													die("La conexión falló: " . $db->connect_error);
-												}
-											
-												// Consultar los datos de los usuarios
-												$sql = "SELECT id, nombre_monitor, fecha_hora FROM clasesusuario";
-												$result = $db->query($sql);
-											
-												// Verificar si hay resultados
-												if ($result->num_rows > 0) {
-													// Almacenar los datos en un array
-													$clasesusuario = [];
-													while($row = $result->fetch_assoc()) {
-														$clasesusuario[] = $row;
-													}
-													return $clasesusuario;
-												} else {
-													return [];
-												}
-											
-												// Cerrar la conexión
-												$db->close();
-											}
-											?>
-
-<?php
-											// Obtener los datos de los usuarios desde la base de datos
-											$clasesusuario = obtenerClasesusuario(); // Esta función debe devolver un array de usuarios
-											
-											?>
-											<!--begin::Table body-->
 											<tbody class="fw-bold text-gray-600">
-											<?php foreach ($clasesusuario as $claseusuario): ?>
-												<tr>
-													<!--begin::Checkbox-->
-													
+												<?php foreach ($clasesUsuario as $claseUsuario): ?>
+													<t>
+														
 
-													<td><?= $claseusuario['nombre_monitor'] ?></td>
-														<!--end::ID-->
-														<!--begin::Nombre-->
-													<td><?= $claseusuario['fecha_hora'] ?></td>
-													
-													<!--end::Action=-->
-												</tr>
+														<td>
+															<?= esc($claseUsuario['nombre_monitor']) ?></a>
+														</td>
+
+														<td>
+															<?= esc($claseUsuario['fecha_hora']) ?></a>
+														</td>
+
+														
+													</tr>
+
 												<?php endforeach; ?>
+												
 											</tbody>
 											<!--end::Table body-->
 										</table>
-										<!--end::Table-->
-									</div>
+
+										<div class="mt-4">
+											<?= $pager->links("default", "custom_pagination") ?>
+										</div>
 									<!--end::Card body-->
 								</div>
 								<!--end::Card-->

@@ -11,6 +11,28 @@ Like: www.facebook.com/keenthemes
 License: For each use you must have a valid license purchased only from above link in order to legally use the theme for your project.
 -->
 <html lang="en">
+<!--begin::Page Vendor Stylesheets(used by this page)-->
+<link href="assets/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
+<!--end::Page Vendor Stylesheets-->
+<!--begin::Global Stylesheets Bundle(used by all pages)-->
+<link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+<!--end::Global Stylesheets Bundle-->
+<!-- DataTables CSS -->
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+
+<!-- DataTables JS -->
+<script>
+function applyFilters() {
+	const form = document.getElementById('filterForm');
+	const formData = new FormData(form);
+	const params = new URLSearchParams(formData).toString();
+
+	// Redirect to the same page with query parameters
+	window.location.href = `?${params}`;
+}
+</script>
+
 	<!--begin::Head-->
 	<head>
 		<title>PADEL ELITE</title>
@@ -370,15 +392,45 @@ License: For each use you must have a valid license purchased only from above li
 											<!--begin::Toolbar-->
 											<div class="d-flex justify-content-end" data-kt-customer-table-toolbar="base">
 												<!--begin::Filter-->
-												<button type="button" class="btn btn-light-primary me-3" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
-												<!--begin::Svg Icon | path: icons/duotune/general/gen031.svg-->
-												<span class="svg-icon svg-icon-2">
-													<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-														<path d="M19.0759 3H4.72777C3.95892 3 3.47768 3.83148 3.86067 4.49814L8.56967 12.6949C9.17923 13.7559 9.5 14.9582 9.5 16.1819V19.5072C9.5 20.2189 10.2223 20.7028 10.8805 20.432L13.8805 19.1977C14.2553 19.0435 14.5 18.6783 14.5 18.273V13.8372C14.5 12.8089 14.8171 11.8056 15.408 10.964L19.8943 4.57465C20.3596 3.912 19.8856 3 19.0759 3Z" fill="black" />
-													</svg>
-												</span>
-												<!--end::Svg Icon-->Filter</button>
-												<!--begin::Menu 1-->
+												<button type="button" class="btn btn-light-primary me-3" data-bs-toggle="modal" data-bs-target="#filterModal">
+													<!--begin::Svg Icon | path: icons/duotune/general/gen031.svg-->
+													<span class="svg-icon svg-icon-2">
+														<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+															<path d="M19.0759 3H4.72777C3.95892 3 3.47768 3.83148 3.86067 4.49814L8.56967 12.6949C9.17923 13.7559 9.5 14.9582 9.5 16.1819V19.5072C9.5 20.2189 10.2223 20.7028 10.8805 20.432L13.8805 19.1977C14.2553 19.0435 14.5 18.6783 14.5 18.273V13.8372C14.5 12.8089 14.8171 11.8056 15.408 10.964L19.8943 4.57465C20.3596 3.912 19.8856 3 19.0759 3Z" fill="black" />
+														</svg>
+													</span>
+													<!--end::Svg Icon-->Filtro
+												</button>
+												<div class="modal fade" id="filterModal" tabindex="-1" aria-labelledby="filterModalLabel" aria-hidden="true">
+													<div class="modal-dialog">
+														<div class="modal-content">
+															<div class="modal-header">
+																<h5 class="modal-title" id="filterModalLabel">Filtros</h5>
+																<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+															</div>
+															<div class="modal-body">
+																<form id="filterForm">
+																	<div class="mb-3">
+																		<label for="filterName" class="form-label">Nombre</label>
+																		<input type="text" class="form-control" id="filterName" name="filterName">
+																	</div>
+																	<div class="mb-3">
+																		<label for="filterEmail" class="form-label">Email</label>
+																		<input type="email" class="form-control" id="filterEmail" name="filterEmail">
+																	</div>
+																	<div class="mb-3">
+																		<label for="filterPhone" class="form-label">Teléfono</label>
+																		<input type="text" class="form-control" id="filterPhone" name="filterPhone">
+																	</div>
+																</form>
+															</div>
+															<div class="modal-footer">
+																<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+																<button type="button" class="btn btn-primary" onclick="applyFilters()">Aplicar Filtros</button>
+															</div>
+														</div>
+													</div>
+												</div>												<!--begin::Menu 1-->
 												<div class="menu menu-sub menu-sub-dropdown w-300px w-md-325px" data-kt-menu="true" id="kt-toolbar-filter">
 													<!--begin::Header-->
 													<div class="px-7 py-5">
@@ -500,66 +552,32 @@ License: For each use you must have a valid license purchased only from above li
 											</thead>
 											<!--end::Table head-->
 											<!--begin::Table body-->
-											<?php
-											function obtenerUsuarios() {
-												// Conectar a la base de datos
-												$db = new mysqli('localhost', 'root', '', 'padel_elite');
-											
-												// Verificar la conexión
-												if ($db->connect_error) {
-													die("La conexión falló: " . $db->connect_error);
-												}
-											
-												// Consultar los datos de los usuarios
-												$sql = "SELECT  nombre, email, telefono FROM usuarios";
-												$result = $db->query($sql);
-											
-												// Verificar si hay resultados
-												if ($result->num_rows > 0) {
-													// Almacenar los datos en un array
-													$usuarios = [];
-													while($row = $result->fetch_assoc()) {
-														$usuarios[] = $row;
-													}
-													return $usuarios;
-												} else {
-													return [];
-												}
-											
-												// Cerrar la conexión
-												$db->close();
-											}
-											?>
-											<?php
-											// Obtener los datos de los usuarios desde la base de datos
-											$usuarios = obtenerUsuarios(); // Esta función debe devolver un array de usuarios
-											
-											?>
-											
-											<!--begin::Table body-->
 											<tbody class="fw-bold text-gray-600">
 												<?php foreach ($usuarios as $usuario): ?>
-													<tr>
+													<t>
 														
-														<!--begin::ID-->														<!--end::ID-->
-														<!--begin::Nombre-->
+
 														<td>
-															<?= $usuario['nombre'] ?></a>
+															<?= esc($usuario['nombre']) ?></a>
 														</td>
-														<!--end::Nombre-->
-														<!--begin::Email-->
+
 														<td>
-															<?= $usuario['email'] ?></a>
+															<?= esc($usuario['email']) ?></a>
 														</td>
-														<!--end::Email-->
-														<!--begin::Telefono-->
-														<td><?= $usuario['telefono'] ?></td>
-														<!--end::Telefono-->
+
+														<td><?= esc($usuario['telefono']) ?></td>
+														
 													</tr>
+
 												<?php endforeach; ?>
+												
 											</tbody>
 											<!--end::Table body-->
 										</table>
+
+										<div class="mt-4">
+											<?= $pager->links("default", "custom_pagination") ?>
+										</div>
 										<!--end::Table-->
 									</div>
 									<!--end::Card body-->
@@ -4321,4 +4339,6 @@ License: For each use you must have a valid license purchased only from above li
 		<!--end::Javascript-->
 	</body>
 	<!--end::Body-->
+<!-- DataTables JS -->
+
 </html>
