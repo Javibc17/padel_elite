@@ -517,8 +517,15 @@ function applyFilters() {
 												</span>
 												<!--end::Svg Icon-->Export</button>
 												<!--end::Export-->
-												<!--begin::Add customer-->
-												<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#kt_modal_add_customer">Add Customer</button>
+												
+												<?php if (session()->getFlashdata('success')): ?>
+													<script>
+														toastr.success('<?= session()->getFlashdata('success'); ?>');
+													</script>
+												<?php endif; ?>
+
+											<!--begin::Add customer-->
+												<a href="<?= base_url('users/save') ?>" class="btn btn-primary mb-3">Crear Usuario</a>
 												<!--end::Add customer-->
 											</div>
 											<!--end::Toolbar-->
@@ -555,8 +562,6 @@ function applyFilters() {
 											<tbody class="fw-bold text-gray-600">
 												<?php foreach ($usuarios as $usuario): ?>
 													<t>
-														
-
 														<td>
 															<?= esc($usuario['nombre']) ?></a>
 														</td>
@@ -567,6 +572,12 @@ function applyFilters() {
 
 														<td><?= esc($usuario['telefono']) ?></td>
 														
+														<td>
+															<a href="<?= base_url('users/save/' . $usuario['id']) ?>" class="btn btn-warning">Editar</a>
+															<a href="<?=base_url('users/delete/') . esc($usuario['id']) ?>" 
+															class="btn btn-danger btn-sm"
+															onclick="return confirm('¿Estás seguro de eliminar este usuario?');">Eliminar</a>
+														</td>
 													</tr>
 
 												<?php endforeach; ?>

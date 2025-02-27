@@ -503,9 +503,6 @@ License: For each use you must have a valid license purchased only from above li
 														<td>
 															<?= esc($rol['nombre']) ?></a>
 														</td>
-
-														
-														
 													</tr>
 
 												<?php endforeach; ?>

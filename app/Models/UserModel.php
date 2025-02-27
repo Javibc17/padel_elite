@@ -13,9 +13,6 @@ class UserModel extends Model
 
     protected $perPage = 10;
 
-    public function findByEmail(string $email)
-    {
-        return $this->where(['email', $email])->first();
-    }
+
 
 }
