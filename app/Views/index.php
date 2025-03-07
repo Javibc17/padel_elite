@@ -251,13 +251,13 @@ License: For each use you must have a valid license purchased only from above li
 					<!--end::Aside menu-->
 					<!--begin::Footer-->
 					<div class="aside-footer flex-column-auto pt-5 pb-7 px-5" id="kt_aside_footer">
-						<a href="<?= base_url('signIn') ?>" class="btn btn-custom btn-primary w-100" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss-="click" title="200+ in-house components and 3rd-party plugins">
-							<span class="btn-label">Sign In</span>
-							<!--begin::Svg Icon | path: icons/duotune/general/gen005.svg-->
-							
-							<!--end::Svg Icon-->
-						</a>
-					</div>
+    <?php if (session()->get('isLoggedIn')): ?>
+        <div class="user-info d-flex flex-column align-items-center">
+            <span class="user-email text-white fs-4 mb-3"><?= session()->get('email') ?></span>
+            <a href="<?= base_url('logout') ?>" class="btn btn-danger w-100">Cerrar Sesión</a>
+        </div>
+    <?php endif; ?>
+</div>
 					<!--end::Footer-->
 				</div>
 				<!--end::Aside-->

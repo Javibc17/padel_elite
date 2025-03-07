@@ -22,7 +22,7 @@ var KTSigninGeneral = function() {
                             }
                         }
                     },
-                    password: {
+                    contraseña: {
                         validators: {
                             notEmpty: {
                                 message: "La contraseña es obligatoria"
@@ -49,27 +49,8 @@ var KTSigninGeneral = function() {
                         submitButton.setAttribute("data-kt-indicator", "on");
                         submitButton.disabled = true;
 
-                        // Simula un retraso para la respuesta
-                        setTimeout(function() {
-                            submitButton.removeAttribute("data-kt-indicator");
-                            submitButton.disabled = false;
-
-                            // Muestra un mensaje de éxito
-                            Swal.fire({
-                                text: "¡Has iniciado sesión con éxito!",
-                                icon: "success",
-                                buttonsStyling: false,
-                                confirmButtonText: "¡Ok!",
-                                customClass: {
-                                    confirmButton: "btn btn-primary"
-                                }
-                            }).then(function(resultado) {
-                                if (resultado.isConfirmed) {
-                                    // Redirige al usuario al index
-                                    window.location.href = "/padel_elite/public";
-                                }
-                            });
-                        }, 2000);
+                        // Envía el formulario
+                        form.submit();
                     } else {
                         // Si hay errores en el formulario
                         Swal.fire({

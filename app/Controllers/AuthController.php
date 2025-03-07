@@ -7,11 +7,16 @@ use App\Models\UserModel; // Importamos el modelo de usuarios para interactuar c
 class AuthController extends BaseController
 {
     /**
+     * @var UserModel
+     */
+    protected $UserModel;
+
+    /**
      * Muestra el formulario de registro de usuario.
      */
     public function register()
     {
-        return view('authentication/flows/basic/signUp'); // Carga y retorna la vista del formulario de registro.
+        return view('authentication/register'); // Carga y retorna la vista del formulario de registro.
     }
 
     /**
@@ -19,33 +24,55 @@ class AuthController extends BaseController
      */
     public function processRegister()
     {
-        helper(['form', 'url']); // Carga los helpers necesarios para trabajar con formularios y URLs.
+        $validation = \Config\Services::validation();
 
-        // Configuración de las reglas de validación del formulario.
-        $rules = [
-            'nombre' => 'required|min_length[3]|max_length[50]', // El nombre es obligatorio y debe tener entre 3 y 50 caracteres.
-            'email' => 'required|valid_email|is_unique[usuarios.email]', // El correo debe ser válido y único en la tabla `users`.
-            'contraseña' => 'required|min_length[6]', // La contraseña debe ser obligatoria y tener al menos 6 caracteres.
-            'password_confirm' => 'required|matches[password]', // La confirmación de la contraseña debe coincidir con la contraseña.
-        ];
+        $validation->setRules([
+            'nombre' => 'required',
+            'telefono' => 'required|numeric|exact_length[9]',
+            'email' => 'required|valid_email',
+            'contraseña' => 'required|min_length[8]',
+            'confirm-password' => 'required|matches[contraseña]',
+            'rol' => 'required',
+            'toc' => 'required'
+        ]);
 
-        // Si la validación falla, volvemos a mostrar el formulario con los errores.
-        if (!$this->validate($rules)) {
-            return view('authentication/flows/basic/signUp', [
-                'validation' => $this->validator, // Pasamos los errores de validación a la vista.
+        if (!$validation->withRequest($this->request)->run()) {
+            return $this->response->setJSON([
+                'success' => false,
+                'errors' => $validation->getErrors()
             ]);
         }
 
-        // Si la validación pasa, procedemos a guardar el usuario en la base de datos.
         $userModel = new UserModel();
-        $userModel->save([
-            'nombre' => $this->request->getPost('nombre'), // Obtenemos el nombre del formulario.
-            'email' => $this->request->getPost('email'), // Obtenemos el correo del formulario.
-            'contraseña' => password_hash($this->request->getPost('contraseña'), PASSWORD_DEFAULT), // Encriptamos la contraseña antes de guardarla.
-        ]);
+        $existingUser = $userModel->where('email', $this->request->getPost('email'))->first();
 
-        // Redirigimos al formulario de inicio de sesión con un mensaje de éxito.
-        return redirect()->to('/login')->with('success', 'Usuario registrado correctamente.');
+        if ($existingUser) {
+            return $this->response->setJSON([
+                'success' => false,
+                'error' => 'El correo electrónico ya está registrado.'
+            ]);
+        }
+
+        try {
+            $userModel->save([
+                'nombre' => $this->request->getPost('nombre'),
+                'telefono' => $this->request->getPost('telefono'),
+                'email' => $this->request->getPost('email'),
+                'contraseña' => password_hash($this->request->getPost('contraseña'), PASSWORD_DEFAULT),
+                'rol' => $this->request->getPost('rol'),
+                'disabled' => 0 // Asigna el estado activo por defecto
+            ]);
+        } catch (\Exception $e) {
+            return $this->response->setJSON([
+                'success' => false,
+                'error' => 'Hubo un problema al crear la cuenta. Por favor, inténtalo de nuevo.'
+            ]);
+        }
+
+        return $this->response->setJSON([
+            'success' => true,
+            'message' => 'Cuenta creada exitosamente.'
+        ]);
     }
 
     /**
@@ -53,7 +80,7 @@ class AuthController extends BaseController
      */
     public function login()
     {
-        return view('authentication/flows/basic/signIn'); // Carga y retorna la vista del formulario de inicio de sesión.
+        return view('authentication/login'); // Asegúrate de que esta ruta sea correcta.
     }
 
     /**
@@ -61,42 +88,35 @@ class AuthController extends BaseController
      */
     public function processLogin()
     {
-        helper(['form', 'url']); // Carga los helpers necesarios para trabajar con formularios y URLs.
-        $session = session(); // Inicia una sesión para el usuario.
+        helper(['form', 'url']);
+        $session = session();
 
-        // Configuración de las reglas de validación del formulario.
         $rules = [
-            'email' => 'required|valid_email', // El correo es obligatorio y debe ser válido.
-            'contraseña' => 'required', // La contraseña es obligatoria.
+            'email' => 'required|valid_email',
+            'contraseña' => 'required',
         ];
 
-        // Si la validación falla, volvemos a mostrar el formulario con los errores.
         if (!$this->validate($rules)) {
-            return view('authentication/flows/basic/signIn', [
-                'validation' => $this->validator, // Pasamos los errores de validación a la vista.
-            ]);
+            return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
         }
 
-        // Si la validación pasa, verificamos las credenciales.
         $userModel = new UserModel();
-        $user = $userModel->findByEmail($this->request->getPost('email')); // Buscamos al usuario por su correo.
+        $user = $userModel->where('email', $this->request->getPost('email'))->first();
 
         if ($user && password_verify($this->request->getPost('contraseña'), $user['contraseña'])) {
-            // Si las credenciales son correctas, guardamos datos del usuario en la sesión.
             $session->set([
-                'id' => $user['id'],           // ID del usuario.
-                'nombre' => $user['nombre'],       // Nombre del usuario.
-                'email' => $user['email'],     // Correo del usuario.
-                'isLoggedIn' => true,          // Bandera para indicar que está logueado.
-                'created_at' => $user['created_at'], // Fecha de registro del usuario.
+                'id' => $user['id'],
+                'nombre' => $user['nombre'],
+                'email' => $user['email'],
+                'isLoggedIn' => true,
+                'created_at' => $user['created_at'],
             ]);
 
-            // Redirigimos a la página de inicio con un mensaje de éxito.
-            return redirect()->to('/dashboard')->with('success', 'Inicio de sesión exitoso.');
+            // Redirigir a Home::index después de un inicio de sesión exitoso
+            return redirect()->to('/home')->with('success', 'Inicio de sesión exitoso.');
         }
 
-        // Si las credenciales son incorrectas, mostramos un mensaje de error.
-        return redirect()->to('/login')->with('error', 'Correo o contraseña incorrectos.');
+        return redirect()->back()->withInput()->with('error', 'Correo o contraseña incorrectos.');
     }
 
     /**
@@ -108,6 +128,6 @@ class AuthController extends BaseController
         $session->destroy(); // Destruye todos los datos de la sesión.
 
         // Redirige al formulario de inicio de sesión con un mensaje de éxito.
-        return redirect()->to('/authentication/flows/basic/signIn')->with('success', 'Has cerrado sesión correctamente.');
+        return redirect()->to('login')->with('success', 'Has cerrado sesión correctamente.');
     }
 }

@@ -162,12 +162,7 @@ abstract class BaseModel
      */
     protected $createdField = 'created_at';
 
-    /**
-     * The column used for update timestamps
-     *
-     * @var string
-     */
-    protected $updatedField = 'updated_at';
+ 
 
     /**
      * If this model should use "softDeletes" and

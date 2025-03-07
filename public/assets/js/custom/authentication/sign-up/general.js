@@ -112,13 +112,13 @@ document.addEventListener("DOMContentLoaded", function() {
                                         if (t.isConfirmed) {
                                             e.reset();
                                             s.reset();
-                                            window.location.href = "<?= base_url('signIn') ?>";
+                                            window.location.href = loginUrl;
                                         }
                                     });
                                 } else {
                                     // Show error message
                                     Swal.fire({
-                                        text: "Hubo un problema al crear la cuenta.",
+                                        text: data.error || "Hubo un problema al crear la cuenta.",
                                         icon: "error",
                                         buttonsStyling: false,
                                         confirmButtonText: "Reintentar",
